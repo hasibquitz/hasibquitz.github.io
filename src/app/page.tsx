@@ -95,7 +95,7 @@ export default function HomePage() {
               powerful.
             </p>
           </motion.div>
- pnpm run build
+
           {/* Category Filter */}
           {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
