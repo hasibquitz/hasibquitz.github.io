@@ -1,5 +1,5 @@
 "use client";
-import CTASection from "@/components/CTASection";
+
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -95,11 +95,7 @@ export default function HomePage() {
               powerful.
             </p>
           </motion.div>
-        <CTASection
-
-          buttonText="Get In Touch"
-          href="/contact"
-        />
+ pnpm run build
           {/* Category Filter */}
           {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
