@@ -11,24 +11,27 @@ const CTASection = ({
   description,
   buttonText,
   href,
-  delay = 1.0,
+  delay = 0.4,
 }: CTASectionProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: -40 }}
       transition={{ duration: 0.5, delay }}
       className="text-center"
     >
-      <GlassmorphismCard className="p-8">
+
         <h3 className="text-2xl font-semibold mb-4 text-white">{title}</h3>
-        <p className="text-gray-300 mb-6 max-w-2xl mx-auto">{description}</p>
-        <Button asChild size="lg" variant="outline">
+        <p className="text-gray-300 mb-0 max-w-2xl mx-auto">{description}</p>
+
+                <Button asChild size="lg" variant="outline"className="mt-10"  >
           <a href={href}>
             {buttonText} <ArrowRight className="ml-2" size={20} />
           </a>
         </Button>
-      </GlassmorphismCard>
+
+
+
     </motion.div>
   );
 };

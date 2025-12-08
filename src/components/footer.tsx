@@ -14,29 +14,29 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    {
-      name: "YouTube",
-      href: "https://www.youtube.com/@itsniloybhowmick",
-      icon: Youtube,
-    },
+//     {
+//       name: "YouTube",
+//       href: "https://www.youtube.com/@itsniloybhowmick",
+//       icon: Youtube,
+//     },
     {
       name: "Instagram",
-      href: "https://instagram.com/its.niloybhowmick",
+      href: "https://www.instagram.com/hasiburmdhasan/",
       icon: Instagram,
     },
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/niloy-bhowmick",
+      href: "https://www.linkedin.com/in/hasibur-hassan/",
       icon: Linkedin,
     },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: Twitter,
-    },
+//     {
+//       name: "Twitter",
+//       href: "#",
+//       icon: Twitter,
+//     },
     {
       name: "Email",
-      href: "mailto:contact.niloybhowmick@gmail.com",
+      href: "hasiburmdhasan@gmail.com",
       icon: Mail,
     },
   ];
@@ -47,7 +47,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Niloy Bhowmick</h3>
+            <h3 className="text-xl font-bold">Md Hasibur Hasan</h3>
             <p className="text-gray-400 text-sm">
               Video Editor and Motion Graphics Designer passionate about
               creating visual stories with style, precision, and cinematic
@@ -109,19 +109,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700/50 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm flex items-center justify-center gap-1">
-            Made with <Heart className="text-red-500" size={16} /> by{" "}
-            <a
-              href="https://www.linkedin.com/in/mdmarufsarker/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Md. Maruf Sarker
-            </a>{" "}
-            © {currentYear}
-          </p>
-        </div>
+
       </div>
     </footer>
   );

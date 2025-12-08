@@ -1,5 +1,5 @@
 "use client";
-
+import CTASection from "@/components/CTASection";
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -90,12 +90,16 @@ export default function HomePage() {
               My Video Projects
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
-              From smooth transitions to precise audio syncing and dynamic
-              animations — I focus on making your content not just polished, but
+              From building emotion to grabbing attention of your viewers and increasing
+              sales — I focus on making your content not just polished, but
               powerful.
             </p>
           </motion.div>
+        <CTASection
 
+          buttonText="Get In Touch"
+          href="/contact"
+        />
           {/* Category Filter */}
           {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -317,9 +321,9 @@ export default function HomePage() {
               What I Can Do for You
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              If you're looking for someone who blends creativity with technical
+              If you're looking for someone who blends creativity and storytelling with technical
               skill, communicates clearly, and truly cares about making your
-              content stand out — I'm your guy.
+              content stand out a — I'm your guy.
             </p>
           </motion.div>
 
@@ -332,13 +336,13 @@ export default function HomePage() {
                 icon: "🎬",
               },
               {
-                title: "Course & Tutorial Video Editing",
+                title: "Course & promotional Video Editing",
                 description:
-                  "Clear, educational content with smooth transitions and professional presentation.",
+                  "Clear, advertisement content with smooth transitions and professional presentation.",
                 icon: "📚",
               },
               {
-                title: "Motion Graphics & Animated Titles",
+                title: "Talking head video editor",
                 description:
                   "Eye-catching animations and graphics that enhance your storytelling.",
                 icon: "✨",
@@ -350,9 +354,9 @@ export default function HomePage() {
                 icon: "🎨",
               },
               {
-                title: "Logo Animations & Lower Thirds",
+                title: "Storytelling",
                 description:
-                  "Professional branding elements that make your content look premium.",
+                  "Storytelling that make your content create emotion.",
                 icon: "🏷️",
               },
               {
@@ -361,6 +365,7 @@ export default function HomePage() {
                   "Crystal clear audio with perfect synchronization and noise reduction.",
                 icon: "🎵",
               },
+
             ].map((service, index) => (
               <motion.div
                 key={service.title}

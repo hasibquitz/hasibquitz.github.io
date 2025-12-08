@@ -3,7 +3,9 @@ export const categories = [
   "Talking Head",
   "Shorts",
   "Promo",
-  "Documentary",
-  "Motion Graphics",
+//   "Documentary",
+//   "Motion Graphics",
   "Explainer",
+  "long form",
+  "film edit",
 ];

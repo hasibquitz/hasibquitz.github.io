@@ -14,22 +14,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Niloy Bhowmick – Video Editor & Motion Graphics Designer",
-    template: "%s | Niloy Bhowmick",
+    default: "Md Hasibur Hasan – Video Editor",
+    template: "%s | Md Hasibur Hasan",
   },
   description:
-    "Turning raw footage into visual stories — with style, precision, and a touch of cinematic magic. Niloy Bhowmick specializes in DaVinci Resolve, Premiere Pro, and After Effects — delivering cinematic edits, motion graphics, and polished storytelling.",
+    "Turning raw footage into visual stories — with style, precision, and a touch of cinematic magic. Md Hasibur Hasan specializes in DaVinci Resolve — delivering cinematic edits, motion graphics, and polished storytelling.",
   keywords: [
-    "Niloy Bhowmick",
+    "Md Hasibur Hasan",
     "Video Editor",
-    "Motion Graphics Designer",
+   // "Motion Graphics Designer",
     "DaVinci Resolve",
     "Premiere Pro",
     "After Effects",
     "Color Grading",
     "YouTube Video Editing",
     "Course Video Editing",
-    "Logo Animation",
+   // "Logo Animation",
     "Visual Storytelling",
     "Freelance Video Editor",
     "Bangladesh Video Editor",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     "Lower Thirds",
     "Audio Sync",
   ],
-  authors: [{ name: "Niloy Bhowmick", url: "https://www.itsniloy.me" }],
-  creator: "Niloy Bhowmick",
-  publisher: "Niloy Bhowmick",
+  authors: [{ name: "Md Hasibur Hasan", url: "https://www.hasiburhasan.me" }],
+  creator: "Md Hasibur Hasan",
+  publisher: "Md Hasibur Hasan",
   robots: {
     index: true,
     follow: true,
@@ -55,33 +55,33 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.itsniloy.me",
-    title: "Niloy Bhowmick – Video Editor & Motion Graphics Designer",
+    url: "https://www.hasiburhasan.me",
+    title: "Md Hasibur Hasan – Video Editor",
     description:
       "Passionate Video Editor and Motion Graphics Designer delivering clean, cinematic edits and dynamic visual storytelling using DaVinci Resolve, Premiere Pro, and After Effects.",
-    siteName: "Niloy Bhowmick Portfolio",
+    siteName: "Md Hasibur Hasan Portfolio",
     images: [
       {
-        url: "/niloybhowmick.png",
+        url: "/hasib.png",
         width: 1200,
         height: 630,
-        alt: "Niloy Bhowmick - Video Editor",
+        alt: "Md Hasibur Hasan - Video Editor",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Niloy Bhowmick – Video Editor & Motion Graphics Designer",
+    title: "Md Hasibur Hasan – Video Editor",
     description:
       "Crafting cinematic edits, motion graphics, and powerful stories. Let's make your content stand out.",
     creator: "@niloy_bhowmick", // update if you have a real Twitter handle
-    images: ["/niloybhowmick.png"],
+    images: ["/hasib.png"],
   },
   verification: {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://www.itsniloy.me",
+    canonical: "https://www.hasiburhasan.me",
   },
   category: "Video Editing",
 };
@@ -103,16 +103,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Niloy Bhowmick",
-              url: "https://www.itsniloy.me",
-              image: "/niloybhowmick.png",
+              name: "Md Hasibur Hasan",
+              url: "https://www.hasiburhasan.me",
+              image: "/hasib.png",
               sameAs: [
-                "https://www.itsniloy.me",
+                "https://www.hasiburhasan.me",
                 "https://linkedin.com/in/niloybhowmick", // update if available
                 "https://youtube.com/@niloybhowmick", // update if available
                 "https://twitter.com/niloy_bhowmick", // update if available
               ],
-              jobTitle: "Video Editor & Motion Graphics Designer",
+              jobTitle: "Video Editor",
               knowsAbout: [
                 "Video Editing",
                 "Motion Graphics",
@@ -147,7 +147,7 @@ export default function RootLayout({
           <main className="pt-16">{children}</main>
           <Footer />
           <JumpToTop />
-          <Toaster position="top-center" />
+          <Toaster />
         </div>
       </body>
     </html>

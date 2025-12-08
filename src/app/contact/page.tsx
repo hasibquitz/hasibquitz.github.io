@@ -90,10 +90,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
-                      href="mailto:contact.niloybhowmick@gmail.com"
+                      href="hasiburmdhasan@gmail.com"
                       className="text-white hover:text-blue-400 transition-colors"
                     >
-                      contact.niloybhowmick@gmail.com
+                      contact.hasiburmdhasan@gmail.com
                     </a>
                   </div>
                 </div>
@@ -105,12 +105,12 @@ export default function ContactPage() {
                   <div>
                     <p className="text-gray-400 text-sm">WhatsApp</p>
                     <a
-                      href="https://wa.me/+8801580385556"
+                      href="https://wa.me/+8801934827226"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white hover:text-green-400 transition-colors"
                     >
-                      +88 (015) 803-85556
+                      +8801934827226
                     </a>
                   </div>
                 </div>
@@ -307,7 +307,7 @@ export default function ContactPage() {
         </div>
 
         {/* FAQ Section */}
-        {/* <motion.div
+         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -379,7 +379,7 @@ export default function ContactPage() {
               </div>
             </div>
           </GlassmorphismCard>
-        </motion.div> */}
+        </motion.div>
       </div>
     </div>
   );

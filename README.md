@@ -1,10 +1,10 @@
-# Niloy Bhowmick - Video Editor Portfolio
+# Md Hasibur Hasan - Video Editor Portfolio
 
 A modern, responsive video editor portfolio website showcasing professional video editing work, motion graphics, and client projects. Built with Next.js 15 and featuring smooth animations, YouTube integration, and a sleek glassmorphism design.
 
 ![Project Overview](./public/demo.png)
 
-🌐 **Live Website**: [https://www.itsniloy.me](https://www.itsniloy.me)
+🌐 **Live Website**: [https://www.hasiburhasan.me](https://www.hasiburhasan.me)
 
 ## Features
 
@@ -62,7 +62,7 @@ A modern, responsive video editor portfolio website showcasing professional vide
  ┃ ┣ 📜demo.png
  ┃ ┣ 📜logo-transparent.png
  ┃ ┣ 📜logo-white.png
- ┃ ┣ 📜niloybhowmick.png
+ ┃ ┣ 📜hasib.png
  ┃ ┗ 📜not-found.jpg
  ┣ 📂src
  ┃ ┣ 📂app
@@ -198,7 +198,7 @@ Add your environment variables:
 
 ```plaintext
 RESEND_API_KEY=your_resend_api_key_here
-NEXT_PUBLIC_SITE_URL=https://www.itsniloy.me
+NEXT_PUBLIC_SITE_URL=https://www.hasiburhasan.me
 ```
 
 4. **Run the development server**
@@ -352,7 +352,7 @@ To implement actual email functionality:
 
 ```plaintext
 RESEND_API_KEY=your_production_resend_key
-NEXT_PUBLIC_SITE_URL=https://www.itsniloy.me
+NEXT_PUBLIC_SITE_URL=https://www.hasiburhasan.me
 ```
 
 4. Deploy automatically
@@ -383,9 +383,9 @@ NEXT_PUBLIC_SITE_URL=https://www.itsniloy.me
 
 This project is open source and available under the [Apache License](LICENSE).
 
-## ‍ About Niloy Bhowmick
+## ‍ About Md Hasibur Hasan
 
-**Professional Video Editor & Motion Graphics Designer**
+**Professional Video Editor**
 
 - 🎬 Specializing in YouTube content, social media videos, and corporate projects
 - 🎨 Expert in DaVinci Resolve, Premiere Pro, and After Effects
@@ -425,7 +425,7 @@ This project is open source and available under the [Apache License](LICENSE).
 
 ### Contact Information
 
-- **Website**: [https://www.itsniloy.me](https://www.itsniloy.me)
+- **Website**: [https://www.hasiburhasan.me](https://www.hasiburhasan.me)
 - **Email**: [contact.niloybhowmick@gmail.com](contact.niloybhowmick@gmail.com)
 - **Response Time**: Within 24 hours
 - **Availability**: Flexible with time zones and deadlines

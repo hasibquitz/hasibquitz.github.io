@@ -25,8 +25,7 @@ export default function AboutPage() {
             About Me
           </h1>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Hey there! I'm Niloy Bhowmick, a passionate Video Editor and Motion
-            Graphics Designer with a deep love for storytelling through visuals.
+            Hey there! I'm Md Hasibur Hasan, a passionate Video Editor with a  love for storytelling and create something great.
           </p>
         </motion.div>
 
@@ -41,27 +40,27 @@ export default function AboutPage() {
               <div className="text-center">
                 <div className="relative w-64 h-64 mx-auto mb-6">
                   <Image
-                    src="/niloybhowmick.png"
-                    alt="Niloy Bhowmick"
+                    src="/hasib.png"
+                    alt="Md Hasibur Hasan"
                     fill
                     className="rounded-full object-cover"
                   />
                 </div>
                 <h2 className="text-2xl font-bold mb-2 text-white">
-                  Niloy Bhowmick
+                  Md Hasibur Hasan
                 </h2>
                 <p className="text-blue-400 mb-4">
-                  Video Editor & Motion Graphics Designer
+                  Video Editor
                 </p>
                 <p className="text-gray-400 text-sm mb-6">
-                  Turning raw footage into visual stories with style, precision,
+                  Turning raw footage into a strong stories with style,emotion,motion animation
                   and cinematic magic.
                 </p>
 
                 {/* Social Icons */}
                 <div className="flex justify-center gap-4">
                   <a
-                    href="https://www.linkedin.com/in/niloy-bhowmick"
+                    href="https://www.linkedin.com/in/hasibur-hassan/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-blue-500 transition-colors"
@@ -76,30 +75,7 @@ export default function AboutPage() {
                   >
                     <Instagram size={24} />
                   </a>
-                  <a
-                    href="https://www.facebook.com/Its.niloybhowmick"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-600 transition-colors"
-                  >
-                    <Facebook size={24} />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@itsniloybhowmick"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-red-600 transition-colors"
-                  >
-                    <Youtube size={24} />
-                  </a>
-                  <a
-                    href="https://github.com/Zan-getsu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <Github size={24} />
-                  </a>
+
                 </div>
               </div>
             </GlassmorphismCard>
@@ -118,16 +94,11 @@ export default function AboutPage() {
               </h3>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  I specialize in DaVinci Resolve, Premiere Pro, and After
-                  Effects — delivering cinematic edits, clean motion graphics,
-                  and polished visual storytelling. From smooth transitions to
-                  precise audio syncing and dynamic animations — I focus on
-                  making your content not just polished, but powerful.
-                </p>
-                <p>
-                  If you're looking for someone who blends creativity with
-                  technical skill, communicates clearly, and truly cares about
-                  making your content stand out — I'm your guy.
+                  I edit videos that bring viewers and sales. Because I focus on storytelling, design, color grading, and sound design, I create premium-quality videos. This approach makes your personal brand grow much faster.
+                 </p>
+                 <p> 1. I know the core skills of video editing, while most video editors know just fancy animation and software use.
+                    </p><p> 2. I have design knowledge, that's why my edits don't look cheap like other video editors' work. Your video will look expensive and stand out.
+                </p> <p> 3. Fast delivery without losing quality.
                 </p>
               </div>
             </GlassmorphismCard>
@@ -145,7 +116,19 @@ export default function AboutPage() {
           </motion.div>
         </div>
 
-        {/* Clients Section */}
+
+        {/* CTA Section */}
+        <CTASection
+          title="Ready to Work Together?"
+          description="Let's create something amazing together. Whether it's a YouTube video, promotional content, or a full documentary, I'm here to bring your vision to life."
+          buttonText="Get In Touch"
+          href="/contact"
+        />
+      </div>
+    </div>
+  );
+}
+       {/* Clients Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -179,15 +162,3 @@ export default function AboutPage() {
             </Marquee>
           </GlassmorphismCard>
         </motion.div>
-
-        {/* CTA Section */}
-        <CTASection
-          title="Ready to Work Together?"
-          description="Let's create something amazing together. Whether it's a YouTube video, promotional content, or a full documentary, I'm here to bring your vision to life."
-          buttonText="Get In Touch"
-          href="/contact"
-        />
-      </div>
-    </div>
-  );
-}
