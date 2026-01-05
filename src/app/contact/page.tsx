@@ -1,56 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import GlassmorphismCard from "@/components/glassmorphism-card";
-import { Mail, MapPin, Clock, Send, MessageCircle } from "lucide-react";
-import { toast } from "sonner"
+import { Mail, MapPin, Clock, MessageCircle, ExternalLink } from "lucide-react";
 
 export default function ContactPage() {
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const message = formData.get("message") as string;
-    const projectType = formData.get("project-type") as string;
-    const timeline = formData.get("timeline") as string;
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      toast("Please enter a valid email address.")
-      return;
-    }
-
-    if (!message || message.length < 30) {
-      toast("Message should be at least 30 characters long.");
-      return;
-    }
-
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, message, projectType, timeline }),
-    });
-
-    const result = await res.json();
-
-    if (res.ok) {
-      toast("Message sent successfully!");
-      form.reset();
-    } else {
-      toast(result.error || "Something went wrong.");
-    }
-  };
-
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -61,6 +15,20 @@ export default function ContactPage() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
+          {/* Status Badge - Modern Design */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-bold mb-8 shadow-[0_0_20px_rgba(34,197,94,0.1)]"
+          >
+            <span className="relative flex h-3 w-3 mr-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            OPEN FOR NEW PROJECTS
+          </motion.div>
+
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Get In Touch
           </h1>
@@ -70,7 +38,7 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 justify-center items-center">
+        <div className="grid lg:grid-cols-2 gap-12 justify-center items-start">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -79,302 +47,158 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <GlassmorphismCard className="p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-white">
+              <h3 className="text-2xl font-semibold mb-8 text-white">
                 Contact Information
               </h3>
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-blue-600 p-3 rounded-lg">
-                    <Mail className="text-white" size={20} />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Email</p>
-                    <a
-                      href="hasiburmdhasan@gmail.com"
-                      className="text-white hover:text-blue-400 transition-colors"
-                    >
-                      contact.hasiburmdhasan@gmail.com
-                    </a>
-                  </div>
-                </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="bg-green-600 p-3 rounded-lg">
-                    <MessageCircle className="text-white" size={20} />
+                {/* Email - Clickable Design */}
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hasiburmdhasan@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-5 p-4 rounded-xl border border-transparent hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="bg-blue-600 p-4 rounded-xl shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
+                    <Mail className="text-white" size={24} />
                   </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">WhatsApp</p>
-                    <a
-                      href="https://wa.me/+8801934827226"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-green-400 transition-colors"
-                    >
+                  <div className="flex-1">
+                    <p className="text-gray-400 text-sm font-medium uppercase tracking-wider">Email Me</p>
+                    <p className="text-white text-lg font-bold break-all group-hover:text-blue-400 transition-colors">
+                      hasiburmdhasan@gmail.com
+                    </p>
+                  </div>
+                  <ExternalLink className="text-gray-600 group-hover:text-blue-400 transition-colors" size={18} />
+                </a>
+
+                {/* WhatsApp - Clickable Design */}
+                <a
+                  href="https://wa.me/8801934827226"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-5 p-4 rounded-xl border border-transparent hover:border-green-500/30 hover:bg-green-500/5 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="bg-green-600 p-4 rounded-xl shadow-lg shadow-green-600/20 group-hover:scale-110 transition-transform">
+                    <MessageCircle className="text-white" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-gray-400 text-sm font-medium uppercase tracking-wider">Chat on WhatsApp</p>
+                    <p className="text-white text-lg font-bold group-hover:text-green-400 transition-colors">
                       +8801934827226
-                    </a>
+                    </p>
+                  </div>
+                  <ExternalLink className="text-gray-600 group-hover:text-green-400 transition-colors" size={18} />
+                </a>
+
+                {/* Location */}
+                <div className="flex items-center space-x-5 p-4">
+                  <div className="bg-purple-600 p-4 rounded-xl shadow-lg shadow-purple-600/20">
+                    <MapPin className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider">Location</p>
+                    <p className="text-white text-lg font-bold">Available Worldwide (Remote)</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="bg-purple-600 p-3 rounded-lg">
-                    <MapPin className="text-white" size={20} />
+                {/* Availability */}
+                <div className="flex items-center space-x-5 p-4">
+                  <div className="bg-orange-600 p-4 rounded-xl shadow-lg shadow-orange-600/20">
+                    <Clock className="text-white" size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">Available Worldwide (Remote)</p>
+                    <p className="text-gray-400 text-sm uppercase tracking-wider">Availability</p>
+                    <p className="text-white text-lg font-bold">Flexible with time zones</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="bg-orange-600 p-3 rounded-lg">
-                    <Clock className="text-white" size={20} />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Availability</p>
-                    <p className="text-white">Flexible with time zones</p>
-                  </div>
-                </div>
-              </div>
-            </GlassmorphismCard>
-
-            <GlassmorphismCard className="p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-white">
-                Why Choose Me?
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="bg-blue-600 w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-medium text-white">Quick Turnaround</h4>
-                    <p className="text-gray-400 text-sm">
-                      Fast delivery without compromising quality
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="bg-green-600 w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-medium text-white">
-                      Professional Quality
-                    </h4>
-                    <p className="text-gray-400 text-sm">
-                      Cinematic edits with attention to detail
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="bg-purple-600 w-2 h-2 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-medium text-white">
-                      Clear Communication
-                    </h4>
-                    <p className="text-gray-400 text-sm">
-                      Regular updates and transparent process
-                    </p>
-                  </div>
-                </div>
               </div>
             </GlassmorphismCard>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Why Choose Me Section */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <GlassmorphismCard className="p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-white">
-                Send Message
+              <h3 className="text-2xl font-semibold mb-8 text-white">
+                Why Choose Me?
               </h3>
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4 p-2">
+                  <div className="bg-blue-600 w-3 h-3 rounded-full mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="text-sm text-gray-300 mb-2 block"
-                    >
-                      Name *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      className="bg-gray-800/50 border-gray-600 text-white"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="text-sm text-gray-300 mb-2 block"
-                    >
-                      Email *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      className="bg-gray-800/50 border-gray-600 text-white"
-                      placeholder="you@example.com"
-                    />
+                    <h4 className="text-xl font-bold text-white mb-1">Quick Turnaround</h4>
+                    <p className="text-gray-400 text-base leading-relaxed">
+                      Fast delivery without compromising quality. I value your time.
+                    </p>
                   </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="project-type"
-                    className="text-sm text-gray-300 mb-2 block"
-                  >
-                    Project Type
-                  </label>
-                  <select
-                    id="project-type"
-                    name="project-type"
-                    className="w-full bg-gray-800/50 border border-gray-600 text-white rounded-md px-3 py-2"
-                  >
-                    <option value="">Select project type</option>
-                    <option value="youtube">YouTube Video</option>
-                    <option value="social-media">Social Media Content</option>
-                    <option value="promo">Promotional Video</option>
-                    <option value="tutorial">Tutorial/Course</option>
-                    <option value="documentary">Documentary</option>
-                    <option value="animation">Logo Animation</option>
-                    <option value="other">Other</option>
-                  </select>
+                <div className="flex items-start space-x-4 p-2">
+                  <div className="bg-green-600 w-3 h-3 rounded-full mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(22,163,74,0.8)]"></div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-1">Professional Quality</h4>
+                    <p className="text-gray-400 text-base leading-relaxed">
+                      Cinematic edits with high-end attention to every single detail.
+                    </p>
+                  </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="timeline"
-                    className="text-sm text-gray-300 mb-2 block"
-                  >
-                    Timeline
-                  </label>
-                  <Input
-                    id="timeline"
-                    name="timeline"
-                    type="text"
-                    className="bg-gray-800/50 border-gray-600 text-white"
-                    placeholder="e.g., 1 week, ASAP"
-                  />
+                <div className="flex items-start space-x-4 p-2">
+                  <div className="bg-purple-600 w-3 h-3 rounded-full mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(147,51,234,0.8)]"></div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-1">Clear Communication</h4>
+                    <p className="text-gray-400 text-base leading-relaxed">
+                      Regular updates throughout the project for a transparent process.
+                    </p>
+                  </div>
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="text-sm text-gray-300 mb-2 block"
-                  >
-                    Project Details *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    placeholder="Tell me about your project..."
-                    className="bg-gray-800/50 border-gray-600 text-white resize-none"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
-                >
-                  <Send className="mr-2" size={16} />
-                  Send Message
-                </Button>
-              </form>
-
-              <div className="mt-6 pt-6 border-t border-gray-700">
-                <p className="text-gray-400 text-sm text-center">
-                  Prefer to chat directly? Reach out on{" "}
-                  <a
-                    href="https://wa.me/+8801580385556"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green-400 hover:text-green-300"
-                  >
-                    WhatsApp
-                  </a>{" "}
-                  for instant communication.
-                </p>
               </div>
             </GlassmorphismCard>
           </motion.div>
         </div>
 
         {/* FAQ Section */}
-         <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-16"
         >
           <GlassmorphismCard className="p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-white text-center">
+            <h3 className="text-2xl font-semibold mb-10 text-white text-center">
               Frequently Asked Questions
             </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="space-y-8">
                 <div>
-                  <h4 className="font-medium text-white mb-2">
-                    How long does a typical project take?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    Most projects are completed within 3-7 days, depending on
-                    complexity and length. Rush orders can be accommodated.
-                  </p>
+                  <h4 className="text-lg font-bold text-white mb-2 underline decoration-blue-500/30 underline-offset-4">How long does a typical project take?</h4>
+                  <p className="text-gray-400 leading-relaxed">Most projects are completed within 3-7 days, depending on complexity. Rush orders are welcome.</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">
-                    What file formats do you work with?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    I work with all major video formats including MP4, MOV, AVI,
-                    and more. I can deliver in any format you need.
-                  </p>
+                  <h4 className="text-lg font-bold text-white mb-2 underline decoration-green-500/30 underline-offset-4">What file formats do you work with?</h4>
+                  <p className="text-gray-400 leading-relaxed">I work with all major formats (MP4, MOV, AVI, etc.) and deliver in 4K or any resolution you need.</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">
-                    Do you provide revisions?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    Yes! I include multiple revisions in all packages to ensure
-                    you're completely satisfied with the final result.
-                  </p>
+                  <h4 className="text-lg font-bold text-white mb-2 underline decoration-purple-500/30 underline-offset-4">Do you provide revisions?</h4>
+                  <p className="text-gray-400 leading-relaxed">Yes! I offer revisions to ensure the final product matches your vision perfectly.</p>
                 </div>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div>
-                  <h4 className="font-medium text-white mb-2">
-                    What's your payment process?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    I typically require 50% upfront and 50% upon completion.
-                    Payment can be made via PayPal, bank transfer, or other
-                    methods.
-                  </p>
+                  <h4 className="text-lg font-bold text-white mb-2 underline decoration-orange-500/30 underline-offset-4">What's your payment process?</h4>
+                  <p className="text-gray-400 leading-relaxed">Usually 50% upfront and 50% on completion. Multiple payment methods are available.</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">
-                    Can you work with my existing brand guidelines?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    I can work with your brand colors, fonts, logos, and style
-                    guidelines to maintain consistency.
-                  </p>
+                  <h4 className="text-lg font-bold text-white mb-2 underline decoration-pink-500/30 underline-offset-4">Can you follow brand guidelines?</h4>
+                  <p className="text-gray-400 leading-relaxed">Absolutely. I can match your brand's colors, fonts, and unique style perfectly.</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">
-                    Do you offer ongoing video editing services?
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    Yes! I work with many clients on retainer for regular
-                    content creation. Let's discuss your ongoing needs.
-                  </p>
+                  <h4 className="text-lg font-bold text-white mb-2 underline decoration-yellow-500/30 underline-offset-4">Ongoing services?</h4>
+                  <p className="text-gray-400 leading-relaxed">Yes, I offer monthly retainer packages for clients who need regular video content.</p>
                 </div>
               </div>
             </div>

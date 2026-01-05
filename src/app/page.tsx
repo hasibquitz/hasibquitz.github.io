@@ -90,9 +90,8 @@ export default function HomePage() {
               My Video Projects
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
-              From building emotion to grabbing attention of your viewers and increasing
-              sales — I focus on making your content not just polished, but
-              powerful.
+              I focus on clean, engaging edits that keep viewers watching and make content easier to understand.
+Below are selected samples of my short-form, talking head, and promotional edits.
             </p>
           </motion.div>
 
@@ -197,14 +196,10 @@ export default function HomePage() {
                             <User size={12} />
                             <span>{project.client_name}</span>
                           </div>
-                          <div className="flex items-center space-x-1">
-                            <Clock size={12} />
-                            <span>
-                              {new Date(
-                                project.publish_date
-                              ).toLocaleDateString()}
-                            </span>
-                          </div>
+                         <div className="flex items-center space-x-1">
+
+                          <span>{project.publish_date}</span>
+                         </div>
                         </div>
 
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -317,30 +312,28 @@ export default function HomePage() {
               What I Can Do for You
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              If you're looking for someone who blends creativity and storytelling with technical
-              skill, communicates clearly, and truly cares about making your
-              content stand out a — I'm your guy.
+             I help creators and small businesses turn raw footage into clear, engaging videos that are easy to watch and professionally presented.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {[
               {
-                title: "YouTube & Social Media Video Editing",
+                title: "Short form & Social Media Video Editing",
                 description:
-                  "Engaging edits optimized for different platforms with perfect pacing and retention hooks.",
-                icon: "🎬",
+                  "Fast cuts and strong hooks | Subtitles and pacing for retention | Reels, Shorts, TikTok optimized",
+                   icon: "🎬",
               },
-              {
-                title: "Course & promotional Video Editing",
-                description:
-                  "Clear, advertisement content with smooth transitions and professional presentation.",
-                icon: "📚",
-              },
+//               {
+//                 title: "Course & promotional Video Editing",
+//                 description:
+//                   "Clear, advertisement content with smooth transitions and professional presentation.",
+//                 icon: "📚",
+//               },
               {
                 title: "Talking head video editor",
                 description:
-                  "Eye-catching animations and graphics that enhance your storytelling.",
+                  "Clean cuts & natural flow | Subtitles and light motion graphics | Ideal for creators & educators",
                 icon: "✨",
               },
               {
@@ -349,12 +342,12 @@ export default function HomePage() {
                   "Professional color work that gives your videos a cinematic and polished look.",
                 icon: "🎨",
               },
-              {
-                title: "Storytelling",
-                description:
-                  "Storytelling that make your content create emotion.",
-                icon: "🏷️",
-              },
+//               {
+//                 title: "Storytelling",
+//                 description:
+//                   "Storytelling that make your content create emotion.",
+//                 icon: "🏷️",
+//               },
               {
                 title: "Audio Sync & Cleanup",
                 description:

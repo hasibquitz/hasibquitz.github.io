@@ -8,6 +8,7 @@ import {
   Mail,
   Heart,
   Instagram,
+  MessageCircle,
 } from "lucide-react";
 
 export default function Footer() {
@@ -35,10 +36,16 @@ export default function Footer() {
 //       icon: Twitter,
 //     },
     {
+      name: "WhatsApp",
+      href: "https://wa.me/8801934827226?text=Hi%20Hasib,%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20video%20project.",
+      icon: MessageCircle, // Lucide-react থেকে MessageCircle ইম্পোর্ট করে নিবে
+    },
+    {
       name: "Email",
-      href: "hasiburmdhasan@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=hasiburmdhasan@gmail.com&su=Video%20Editing%20Project&body=Hi%20Hasib,%20I%20have%20a%20video%20editing%20project%20to%20discuss",
       icon: Mail,
     },
+
   ];
 
   return (
@@ -96,7 +103,7 @@ export default function Footer() {
                   <a
                     key={link.name}
                     href={link.href}
-                    target="_blank"
+//                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
                     aria-label={link.name}

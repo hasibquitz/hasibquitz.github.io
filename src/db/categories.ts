@@ -5,7 +5,7 @@ export const categories = [
   "Promo",
 //   "Documentary",
 //   "Motion Graphics",
-  "Explainer",
-  "long form",
+//   "Explainer",
+//   "long form",
   "film edit",
 ];
