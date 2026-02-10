@@ -93,7 +93,7 @@ export default function HomePage() {
               I focus on clean, engaging edits that keep viewers watching and make content easier to understand.
 
             </p>
-                    {/* CTA Section */}
+
 
           </motion.div>
 
