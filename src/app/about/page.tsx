@@ -40,7 +40,7 @@ export default function AboutPage() {
               <div className="text-center">
                 <div className="relative w-64 h-64 mx-auto mb-6">
                   <Image
-                    src="/hasib.png"
+                    src="/hasib.jpg"
                     alt="Md Hasibur Hasan"
                     fill
                     className="rounded-full object-cover"
