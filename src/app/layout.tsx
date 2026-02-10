@@ -2,6 +2,8 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import MouseMoveEffect from "@/components/mouse-move-effect";
@@ -62,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Md Hasibur Hasan Portfolio",
     images: [
       {
-        url: "/hasib.png",
+        url: "/hasib.jpg",
         width: 1200,
         height: 630,
         alt: "Md Hasibur Hasan - Video Editor",
@@ -75,7 +77,7 @@ export const metadata: Metadata = {
     description:
       "Crafting cinematic edits, motion graphics, and powerful stories. Let's make your content stand out.",
     creator: "@niloy_bhowmick", // update if you have a real Twitter handle
-    images: ["/hasib.png"],
+    images: ["/hasib.jpg"],
   },
   verification: {
     google: "your-google-verification-code",
@@ -105,7 +107,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Md Hasibur Hasan",
               url: "https://www.hasiburhasan.me",
-              image: "/hasib.png",
+              image: "/hasib.jpg",
               sameAs: [
                 "https://www.hasiburhasan.me",
                 "https://linkedin.com/in/niloybhowmick", // update if available
