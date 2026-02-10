@@ -1,5 +1,5 @@
 "use client";
-
+import CTASection from "@/components/CTASection";
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -87,12 +87,19 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              My Video Projects
+              My Video Edits
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
               I focus on clean, engaging edits that keep viewers watching and make content easier to understand.
-Below are selected samples of my short-form, talking head, and promotional edits.
+
             </p>
+                    {/* CTA Section */}
+        <CTASection
+
+          buttonText="Get In Touch"
+          href="/contact"
+        />
+
           </motion.div>
 
           {/* Category Filter */}
@@ -319,7 +326,7 @@ Below are selected samples of my short-form, talking head, and promotional edits
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {[
               {
-                title: "Short form & Social Media Video Editing",
+                title: "Short form video Editing",
                 description:
                   "Fast cuts and strong hooks | Subtitles and pacing for retention | Reels, Shorts, TikTok optimized",
                    icon: "🎬",
@@ -349,10 +356,10 @@ Below are selected samples of my short-form, talking head, and promotional edits
 //                 icon: "🏷️",
 //               },
               {
-                title: "Audio Sync & Cleanup",
+                title: "Long form editing",
                 description:
-                  "Crystal clear audio with perfect synchronization and noise reduction.",
-                icon: "🎵",
+                  "High-retention editing for documentaries and long-form YouTube content.",
+                icon: "🎞️",
               },
 
             ].map((service, index) => (
@@ -371,6 +378,7 @@ Below are selected samples of my short-form, talking head, and promotional edits
                 </GlassmorphismCard>
               </motion.div>
             ))}
+
           </div>
         </div>
       </section>

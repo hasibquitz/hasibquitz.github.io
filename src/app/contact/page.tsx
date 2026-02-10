@@ -51,26 +51,6 @@ export default function ContactPage() {
                 Contact Information
               </h3>
               <div className="space-y-6">
-
-                {/* Email - Clickable Design */}
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hasiburmdhasan@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-5 p-4 rounded-xl border border-transparent hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300 group cursor-pointer"
-                >
-                  <div className="bg-blue-600 p-4 rounded-xl shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
-                    <Mail className="text-white" size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-gray-400 text-sm font-medium uppercase tracking-wider">Email Me</p>
-                    <p className="text-white text-lg font-bold break-all group-hover:text-blue-400 transition-colors">
-                      hasiburmdhasan@gmail.com
-                    </p>
-                  </div>
-                  <ExternalLink className="text-gray-600 group-hover:text-blue-400 transition-colors" size={18} />
-                </a>
-
                 {/* WhatsApp - Clickable Design */}
                 <a
                   href="https://wa.me/8801934827226"
@@ -89,6 +69,26 @@ export default function ContactPage() {
                   </div>
                   <ExternalLink className="text-gray-600 group-hover:text-green-400 transition-colors" size={18} />
                 </a>
+
+                {/* Email - Clickable Design */}
+                <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hasiburmdhasan@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-5 p-4 rounded-xl border border-transparent hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="bg-blue-600 p-4 rounded-xl shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
+                    <Mail className="text-white" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-gray-400 text-sm font-medium uppercase tracking-wider">Email Me</p>
+                    <p className="text-white text-lg font-bold break-all group-hover:text-blue-400 transition-colors">
+                      hasiburmdhasan@gmail.com
+                    </p>
+                  </div>
+                  <ExternalLink className="text-gray-600 group-hover:text-blue-400 transition-colors" size={18} />
+                </a>
+
 
                 {/* Location */}
                 <div className="flex items-center space-x-5 p-4">

@@ -55,8 +55,7 @@ export const specializations = [
     title: "YouTube Content Creation",
     skills: [
       "Retention Editing",
-      "Thumbnail Design",
-      "SEO Optimization",
+
       "Analytics Understanding",
     ],
     icon: "🎬",
@@ -67,26 +66,25 @@ export const specializations = [
     title: "Social Media Videos",
     skills: [
       "Short-form Content",
-      "Vertical Video",
-      "Platform Optimization",
+
       "Viral Techniques",
     ],
     icon: "📱",
     description:
       "Expert in creating content optimized for Instagram, TikTok, and other platforms",
   },
-  {
-    title: "Corporate Videos",
-    skills: [
-      "Professional Presentation",
-      "Brand Consistency",
-      "Clean Aesthetics",
-      "Message Clarity",
-    ],
-    icon: "🏢",
-    description:
-      "Creating polished corporate content that communicates effectively",
-  },
+//   {
+//     title: "Corporate Videos",
+//     skills: [
+//       "Professional Presentation",
+//       "Brand Consistency",
+//       "Clean Aesthetics",
+//       "Message Clarity",
+//     ],
+//     icon: "🏢",
+//     description:
+//       "Creating polished corporate content that communicates effectively",
+//   },
   {
     title: "Promotional video ",
     skills: [
@@ -99,17 +97,15 @@ export const specializations = [
     description:
       "Specialized in making complex topics easy to understand through video",
   },
-  {
-    title: "Motion Graphics",
-    skills: [
-      "2D Animation",
-      "Logo Animation",
-      "Lower Thirds",
-      "Kinetic Typography",
-    ],
-    icon: "✨",
-    description: "Creating eye-catching animations that enhance storytelling",
-  },
+//   {
+//     title: "Motion Graphics",
+//     skills: [
+//       "Lower Thirds",
+//       "Kinetic Typography",
+//     ],
+//     icon: "✨",
+//     description: "Creating eye-catching animations that enhance storytelling",
+//   },
   {
     title: "Color Grading",
     skills: [
