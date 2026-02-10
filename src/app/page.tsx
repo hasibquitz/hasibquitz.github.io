@@ -95,8 +95,8 @@ export default function HomePage() {
             </p>
                     {/* CTA Section */}
         <CTASection
-          title=""
-          description=""
+          title="Ready to Work Together?"
+
           buttonText="Get In Touch"
           href="/contact"
         />
