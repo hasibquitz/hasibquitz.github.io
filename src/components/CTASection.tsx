@@ -8,7 +8,7 @@ import { CTASectionProps } from "@/types/cta";
 
 const CTASection = ({
   title,
-
+  description,
   buttonText,
   href,
   delay = 0.4,
@@ -21,8 +21,8 @@ const CTASection = ({
       className="text-center"
     >
 
-        <h3 className="text-2xl font-semibold mt-15 mb-1 text-white">{title}</h3>
-
+        <h3 className="text-2xl font-semibold mt-20 mb-4 text-white">{title}</h3>
+        <p className="text-gray-300 mb-0 max-w-2xl mx-auto">{description}</p>
 
                 <Button asChild size="lg" variant="outline"className="mt-5"  >
           <a href={href}>

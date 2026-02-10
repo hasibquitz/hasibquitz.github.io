@@ -120,7 +120,7 @@ export default function AboutPage() {
         {/* CTA Section */}
         <CTASection
           title="Ready to Work Together?"
-//           description="Let's create something amazing together. Whether it's a YouTube video, promotional content, or a full documentary, I'm here to bring your vision to life."
+          description="Whether you have a question or just want to say hi, my inbox is always open."
           buttonText="Get In Touch"
           href="/contact"
         />

@@ -94,12 +94,6 @@ export default function HomePage() {
 
             </p>
                     {/* CTA Section */}
-        <CTASection
-          title="Ready to Work Together?"
-
-          buttonText="Get In Touch"
-          href="/contact"
-        />
 
           </motion.div>
 
@@ -381,6 +375,12 @@ export default function HomePage() {
             ))}
 
           </div>
+                  <CTASection
+          title="Ready to Work Together?"
+          description="Let’s connect and create something unique"
+          buttonText="Get In Touch"
+          href="/contact"
+        />
         </div>
       </section>
     </div>
