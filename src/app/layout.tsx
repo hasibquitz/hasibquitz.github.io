@@ -1,9 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
-
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import MouseMoveEffect from "@/components/mouse-move-effect";
