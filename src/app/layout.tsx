@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "Md Hasibur Hasan Portfolio",
     images: [
       {
-        url: "/hasib.jpg",
+        url: "/hasib.png",
         width: 1200,
         height: 630,
         alt: "Md Hasibur Hasan - Video Editor",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     description:
       "Crafting cinematic edits, motion graphics, and powerful stories. Let's make your content stand out.",
     creator: "@niloy_bhowmick", // update if you have a real Twitter handle
-    images: ["/hasib.jpg"],
+    images: ["/hasib.png"],
   },
   verification: {
     google: "your-google-verification-code",
@@ -104,7 +104,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Md Hasibur Hasan",
               url: "https://www.hasiburhasan.me",
-              image: "/hasib.jpg",
+              image: "/hasib.png",
               sameAs: [
                 "https://www.hasiburhasan.me",
                 "https://linkedin.com/in/niloybhowmick", // update if available

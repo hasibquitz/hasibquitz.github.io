@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Md Hasibur Hasan</h3>
             <p className="text-gray-400 text-sm">
-              Video Editor and Motion Graphics Designer passionate about
+              Video Editor and Colorist passionate about
               creating visual stories with style, precision, and cinematic
               magic.
             </p>
